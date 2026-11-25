@@ -15,8 +15,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F26522'/%3E%3Cpath d='M9 7h9v4h4v14H9z' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3Ccircle cx='14' cy='15' r='3' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/saira-rdzen.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/manrope-rdzen.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="img/hero-p-1000.webp" imagesrcset="img/hero-p-700.webp 700w, img/hero-p-1000.webp 1000w, img/hero-p-1400.webp 1400w" imagesizes="100vw" media="(max-width:760px)">
-<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" imagesizes="100vw" media="(min-width:761px)">
+<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" imagesizes="(max-width:760px) 150vw, 100vw" fetchpriority="high">
 <style>
 @font-face{font-family:Saira;font-weight:100 900;font-display:swap;src:url(fonts/saira-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
 @font-face{font-family:Saira;font-weight:100 900;font-display:swap;src:url(fonts/saira-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
@@ -364,11 +363,13 @@ form .btn{grid-column:1/-1;width:100%}
  .logo svg{width:28px;height:38px}
  .logo span{font-size:12.6px}.logo b{font-size:14.6px}
  .top .tel{width:42px;padding:0;justify-content:center}
- .hero{align-items:flex-end}
- .hero picture img{object-position:50% 30%}
- .hero::after{background:linear-gradient(180deg,rgba(12,16,14,.05) 0%,rgba(12,16,14,0) 26%,rgba(12,16,14,.55) 48%,rgba(12,16,14,.86) 72%,rgba(12,16,14,.9) 100%)}
+ .hero{flex-direction:column;align-items:stretch;background:var(--cz)}
+ .hero picture{position:relative;inset:auto;flex:1 1 auto;min-height:180px;height:auto;width:100%}
+ .hero picture img{object-position:68% 60%}
+ .hero picture::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(180deg,rgba(20,20,20,0),rgba(20,20,20,.85))}
+ .hero::after{display:none}
  .hero .lata-v{display:none}
- .hero-in{padding:40px 0 28px}
+ .hero-in{padding:22px 0 26px;margin-top:-1px}
  .hero h1{font-size:clamp(29px,min(8.2vw,5.1svh),40px)}
  .hero .lead{font-size:clamp(15.5px,min(4.2vw,2.5svh),17px);margin:14px 0 24px;line-height:1.5}
  .hero .btn{width:100%}
@@ -448,8 +449,7 @@ form .btn{grid-column:1/-1;width:100%}
 <main>
 <section class="hero">
  <picture>
-  <source media="(max-width:760px)" srcset="img/hero-p-700.webp 700w, img/hero-p-1000.webp 1000w, img/hero-p-1400.webp 1400w" sizes="100vw">
-  <img src="img/hero-1920.webp" srcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" sizes="100vw" width="2600" height="1734" alt="Odbiornik GNSS na statywie ustawiony na łące" fetchpriority="high" decoding="async">
+    <img src="img/hero-1920.webp" srcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" sizes="(max-width:760px) 150vw, 100vw" width="2600" height="1734" alt="Odbiornik GNSS na statywie ustawiony na łące" fetchpriority="high" decoding="async">
  </picture>
  <div class="lata-v" aria-hidden="true"></div>
  <div class="wrap hero-in">

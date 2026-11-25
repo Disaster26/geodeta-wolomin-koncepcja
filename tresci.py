@@ -467,8 +467,7 @@ def trasa(q):
 # ---------------- STRONA GLOWNA ----------------
 GL = f'''<section class="hero">
  <picture>
-  <source media="(max-width:760px)" srcset="img/hero-p-700.webp 700w, img/hero-p-1000.webp 1000w, img/hero-p-1400.webp 1400w" sizes="100vw">
-  <img src="img/hero-1920.webp" srcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" sizes="100vw" width="2600" height="1734" alt="Odbiornik GNSS na statywie ustawiony na łące" fetchpriority="high" decoding="async">
+    <img src="img/hero-1920.webp" srcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" sizes="(max-width:760px) 150vw, 100vw" width="2600" height="1734" alt="Odbiornik GNSS na statywie ustawiony na łące" fetchpriority="high" decoding="async">
  </picture>
  <div class="lata-v" aria-hidden="true"></div>
  <div class="wrap hero-in">
@@ -616,7 +615,7 @@ STRONY.insert(0, {
     'slug': '', 'title': 'Geodeta Wołomin, Tłuszcz, Jadów - Usługi Geodezyjne Ściborowscy',
     'desc': 'Geodeta w powiecie wołomińskim: mapy do celów projektowych, tyczenie budynków, inwentaryzacje, podziały i granice. Biura w Tłuszczu, Woli Rasztowskiej i Jadowie. Bezpłatna porada i wycena: 695 738 925.',
     'tresc': GL, 'ld': [FIRMA_LD],
-    'preload': '<link rel="preload" as="image" href="img/hero-p-1000.webp" imagesrcset="img/hero-p-700.webp 700w, img/hero-p-1000.webp 1000w, img/hero-p-1400.webp 1400w" imagesizes="100vw" media="(max-width:760px)">\n<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" imagesizes="100vw" media="(min-width:761px)">',
+    'preload': '<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2600.webp 2600w" imagesizes="(max-width:760px) 150vw, 100vw" fetchpriority="high">',
 })
 
 # ---------------- O FIRMIE ----------------

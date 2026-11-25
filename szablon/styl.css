@@ -335,11 +335,13 @@ form .btn{grid-column:1/-1;width:100%}
  .logo svg{width:28px;height:38px}
  .logo span{font-size:12.6px}.logo b{font-size:14.6px}
  .top .tel{width:42px;padding:0;justify-content:center}
- .hero{align-items:flex-end}
- .hero picture img{object-position:50% 30%}
- .hero::after{background:linear-gradient(180deg,rgba(12,16,14,.05) 0%,rgba(12,16,14,0) 26%,rgba(12,16,14,.55) 48%,rgba(12,16,14,.86) 72%,rgba(12,16,14,.9) 100%)}
+ .hero{flex-direction:column;align-items:stretch;background:var(--cz)}
+ .hero picture{position:relative;inset:auto;flex:1 1 auto;min-height:180px;height:auto;width:100%}
+ .hero picture img{object-position:68% 60%}
+ .hero picture::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(180deg,rgba(20,20,20,0),rgba(20,20,20,.85))}
+ .hero::after{display:none}
  .hero .lata-v{display:none}
- .hero-in{padding:40px 0 28px}
+ .hero-in{padding:22px 0 26px;margin-top:-1px}
  .hero h1{font-size:clamp(29px,min(8.2vw,5.1svh),40px)}
  .hero .lead{font-size:clamp(15.5px,min(4.2vw,2.5svh),17px);margin:14px 0 24px;line-height:1.5}
  .hero .btn{width:100%}
